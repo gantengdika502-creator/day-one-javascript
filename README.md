@@ -15,3 +15,5 @@ Project ini terdiri dari 5 halaman utama yang masing-masing menggunakan metode b
 1. Clone repository ini.
 2. Buka `index.html` di browser favorit kalian.
 3. Gunakan menu navigasi di bagian atas untuk berpindah antar metode.
+
+---
