@@ -3,46 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Web Nama</title>
+    <title>External</title>
     <style>
         body {
-            font-family: sans-serif;
-            background-color: #e3f2fd;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #0284c7;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            width: 100%;
         }
 
-        .box {
-            background: white;
-            padding: 30px;
+        .card {
+            background-color: white;
+            padding: 40px;
             border-radius: 15px;
-            border: 1px solid #bbdefb;
-            width: 300px;
+            border: 1px solid #ddd;
+            width: 330px;
             text-align: center;
         }
 
         h2 {
-            color: #1565c0;
-            margin-top: 0;
+            color: #0284c7;
         }
 
         input {
             width: 100%;
             padding: 10px;
             margin: 15px 0;
-            border: 1px solid #90caf9;
+            border: 1px solid #ccc;
             border-radius: 8px;
             box-sizing: border-box;
-            outline: none;
         }
 
         button {
             width: 100%;
-            padding: 10px;
-            background-color: #1976d2;
+            padding: 12px;
+            background-color: #0284c7;
             color: white;
             border: none;
             border-radius: 8px;
@@ -51,21 +71,32 @@
         }
 
         button:hover {
-            background-color: #1565c0;
+            background-color: #0369a1;
         }
     </style>
 </head>
 <body>
 
-    <div class="box">
-        <h2>Selamat Datang</h2>
-        <p>Silahkan masukkan nama anda</p>
-        
-        <input type="text" id="namaUser" onkeyup="deteksiKetik()" placeholder="Nama kamu...">
-        
-        <button onclick="prosesData()">Konfirmasi</button>
+    <nav>
+        <a href="index.html">External</a>
+        <a href="internal.html">Internal</a>
+        <a href="embed.html">Embed</a>
+        <a href="inline.html">Inline</a>
+        <a href="prompt.html">Prompt</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>Metode External</h2>
+            <p>Silahkan masukkan nama anda</p>
+            
+            <input type="text" id="namaUser" onkeyup="deteksiKetik()" placeholder="ketik nama...">
+            
+            <button onclick="prosesData()">Konfirmasi</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>

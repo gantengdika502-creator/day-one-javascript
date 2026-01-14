@@ -1,55 +1,62 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Web Modern - Metode Inline</title>
-
+    <title>Inline</title>
     <style>
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #0284c7;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            width: 100%;
         }
 
         .card {
-            background: white;
+            background-color: white;
             padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            width: 320px;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+            width: 330px;
             text-align: center;
         }
 
         h2 {
-            color: #0369a1;
-            margin-bottom: 10px;
-            font-size: 24px;
-        }
-
-        p {
-            color: #64748b;
-            font-size: 14px;
-            margin-bottom: 20px;
+            color: #0284c7;
         }
 
         input {
             width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            outline: none;
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
             box-sizing: border-box;
-            transition: border-color 0.3s;
-        }
-
-        input:focus {
-            border-color: #38bdf8;
         }
 
         button {
@@ -58,34 +65,39 @@
             background-color: #0284c7;
             color: white;
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: background 0.3s, transform 0.2s;
+            font-weight: bold;
         }
 
         button:hover {
             background-color: #0369a1;
-            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h2>Halo!</h2>
-        <p>Silahkan masukkan nama lengkap (Metode Inline).</p>
-        
-        <input type="text" id="namaUser" 
-               onkeyup="console.log('Ketik: ' + this.value)" 
-               placeholder="Nama lengkap kamu...">
-        
-        <button onclick="this.value = document.getElementById('namaUser').value; 
-                         if(this.value === '') { alert('Isi dulu bos!'); } 
-                         else { alert('Mantap, ' + this.value + '!'); }">
-            Konfirmasi
-        </button>
+    <nav>
+        <a href="index.html">External</a>
+        <a href="internal.html">Internal</a>
+        <a href="embed.html">Embed</a>
+        <a href="inline.html">Inline</a>
+        <a href="prompt.html">Prompt</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>Metode Inline</h2>
+            <p>Silahkan masukkan nama anda:</p>
+            
+            <input type="text" id="namaUser" 
+                   onkeyup="console.log('Lagi ngetik: ' + this.value)" 
+                   placeholder="nama kamu...">
+            
+            <button onclick="var nama = document.getElementById('namaUser').value; if(nama == '') { alert('Isi dulu bos!'); } else { alert('Mantap, ' + nama + '!'); }">
+                Konfirmasi
+            </button>
+        </div>
     </div>
 
 </body>
