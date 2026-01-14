@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IN LINE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+            width: 300px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>FORM LOGIN/h2>
+        <p>Silahkan masukkan nama anda:</p>
+        
+        <input type="text" id="namaInput" onkeyup="logKetik()" placeholder="Ketik nama...">
+        
+        <button onclick="prosesKlik()">Kirim Data</button>
+    </div>
+
+    <script>
+        function logKetik() {
+            var isi = document.getElementById("namaInput").value;
+            console.log("Lagi ngetik: " + isi);
+        }
+
+        function prosesKlik() {
+            var nama = document.getElementById("namaInput").value;
+
+            if (nama == "") {
+                alert("Nama tidak boleh kosong!");
+            } else {
+                alert("Halo " + nama + ", data sudah dikirim!");
+                console.log("Data sukses: " + nama);
+            }
+        }
+    </script>
+
+</body>
+</html>
